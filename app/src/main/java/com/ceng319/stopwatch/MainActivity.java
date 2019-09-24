@@ -18,36 +18,36 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // TODO: Remove the following commented code to see the working version.
-        /*if (savedInstanceState != null) {
+        if (savedInstanceState != null) {
             seconds = savedInstanceState.getInt("seconds");
             running = savedInstanceState.getBoolean("running");
             wasRunning = savedInstanceState.getBoolean("wasRunning");
-        }*/
+        }
         runTimer();
     }
 
     // TODO: Remove the following commented code to see the working version.
-    /*@Override
+    @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt("seconds", seconds);
         savedInstanceState.putBoolean("running", running);
         savedInstanceState.putBoolean("wasRunning", wasRunning);
-    }*/
+    }
 
     @Override
     protected void onResume() {
         super.onResume();
         // TODO: Remove the following commented code to see the working version.
-        /*if (wasRunning) {
+        if (wasRunning) {
             running = true;
-        }*/
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         // TODO: Remove the following commented code to see the working version.
-       // wasRunning = running;
+        wasRunning = running;
         running = false;
     }
 
